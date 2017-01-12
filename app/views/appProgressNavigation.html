@@ -1,0 +1,7 @@
+﻿<div class="main-bread">
+    <div class="main-bread-sub" ng-repeat="nav in progNav">
+        <div ng-if="($index < progNav.length-1 && $index > 0) || $index==progNav.length-1" class="arrow-right-front"></div>
+        <div class="breadScrum" ng-class="(nav.isActive==1)?'breadScrum-active':''">{{nav.id}}.&nbsp;{{nav.message}}</div>
+        <div ng-if="!($index==progNav.length-1)" class="arrow-right" ng-class="(nav.isActive==1)?'arrow-right-active':''"></div>
+    </div>
+</div>

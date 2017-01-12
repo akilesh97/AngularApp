@@ -1,0 +1,6 @@
+﻿<div ng-show="validationService.validationMessage.length > 0" class="errorBox">
+    <div class="danger" style="padding-bottom:5px;" id="showvalidationmsgs">Please clear the below errors :</div>
+    <div ng-repeat="message in validationService.validationMessage">
+        <a class="highlightErrorText" style="cursor: pointer" ng-click="validationService.focus($index)" id="{{message.id}}Error"><i class="glyphicon glyphicon-exclamation-sign"></i> &nbsp; {{message.message}} </a>
+    </div>
+</div>

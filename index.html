@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html ng-app="angularapp">
+<head>
+    <title>Angular App</title>
+    <link rel="site.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css" type="text/css" />
+    <script src="app.js"></script>
+    <script src="/app/services/appProgressNavigationService.js"></script>
+    <script src="/app/services/validationService.js"></script>
+    <script src="/app/controllers/homeController.js"></script>
+
+</head>
+<body ng-controller="homeController">
+    <div>
+        <div ng-include="'/app/views/progressNavigation.html'"></div>
+        <div ng-if="progNav.length >0" ng-include="'/app/views/progressNavigation.html'"></div>
+        test
+    </div>
+</body>
+</html>
