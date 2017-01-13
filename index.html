@@ -2,9 +2,9 @@
 <html ng-app="angularapp">
 <head>
     <title>Angular App</title>
-    <link rel="site.css" type="text/css" />
+    <link href="/app/content/styles/site.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <link rel="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="app.js"></script>
     <script src="/app/services/appProgressNavigationService.js"></script>
     <script src="/app/services/validationService.js"></script>
@@ -13,9 +13,7 @@
 </head>
 <body ng-controller="homeController">
     <div>
-        <div ng-include="'/app/views/progressNavigation.html'"></div>
-        <div ng-if="progNav.length >0" ng-include="'/app/views/progressNavigation.html'"></div>
-        test
+        <div ng-include="'app/views/hotelReservation.html'"></div>
     </div>
 </body>
 </html>

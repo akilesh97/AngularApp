@@ -1,0 +1,44 @@
+﻿
+<div class="container">
+    <div  ng-include="'app/views/appProgressNavigation.html'"></div>
+
+    <div ng-include="'app/views/validationMsgs.html'"></div>
+    <br />
+    <br />
+    {{navigate.length | json}}
+    <br />
+    <div class="row" style="height:60%;text-align:center;height:600px;">
+        <div class="col-md-1" style="background-color:gainsboro;display:inline-block;text-align:center;height:100%;" ng-click="navigate.pop('');" ng-disabled="(navigate.length==0);"> <i class="glyphicon glyphicon-chevron-left" ></i> </div>
+        <div class="col-md-10">
+            <div ng-click="updateNavBar('Hotel Type',true);" ng-show="navigate.length==0">
+                <h3>Select hotel type :</h3>
+                <div>
+                    <span>Hotel</span>
+                    <span>Hotel with casino</span>
+                </div>
+            </div>
+            <div ng-click="updateNavBar('Room Type',!RAROptions.Agree);" ng-show="navigate.length==1">
+                <h3>Select room type:</h3>
+                <div>
+                    <span>King</span>
+                    <span>Queen</span>
+                </div>
+            </div>
+            <div ng-click="updateNavBar('Payment',!RAROptions.Agree);" ng-show="navigate.length==2">
+                <h3>Make payment</h3>
+                <div>
+
+                </div>
+            </div>
+            <div ng-click="updateNavBar('Receipt',!RAROptions.Agree);" ng-show="navigate.length==3">
+                <h3>Receipt</h3>
+                <div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1" style="background-color:gainsboro;display:inline-block;text-align:center;height:100%;" ng-disabled="(navigate.length > 1);" ng-click="navigate.push('');" >{{navigate.length > 1}}<i class="glyphicon glyphicon-chevron-right"></i> </div>
+
+    </div>
+
+</div>

@@ -1,1 +1,63 @@
-﻿
+﻿.highlightBorder {
+    border: 1px solid #b83a35 !important;
+}
+
+
+.main-bread {
+    text-align: center;
+    margin-bottom:20px;
+}
+
+.main-bread-sub {
+    display: inline-block;
+    height: 30px;
+    margin-left: -35px;
+    position: relative;
+}
+
+.breadScrum {
+    display: inline-block;
+    width: 180px;
+    border: 1px solid #E6E6E6;
+    margin-left: 0px;
+    text-align: center;
+    height: 58px;
+    background-color: #E6E6E6;
+    padding-top: 14px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.arrow-right {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 29px solid transparent;
+    border-bottom: 29px solid transparent;
+    border-left: 15px solid #E6E6E6;
+    position: relative;
+    left: -5px;
+    top: 25px;
+    z-index: 10;
+}
+
+.arrow-right-front {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 29px solid transparent;
+    border-bottom: 29px solid transparent;
+    border-left: 15px solid #fff;
+    position: relative;
+    left: 18px;
+    top: 25px;
+}
+
+
+.arrow-right-active {
+    border-left: 15px solid #82B440;
+}
+
+.breadScrum-active {
+    background-color: #82B440;
+}

@@ -1,9 +1,9 @@
 ﻿'use strict';
-app.factory('progressNavigationService', ['$http', '$log', '$q', function ($http, $log, $q) {
-    var progNavForRarAndAdoi = [{ id: 1, message: 'Agreement', isActive: 0 },
-                  { id: 2, message: 'E-sign', isActive: 0 },
-                  { id: 3, message: 'Upload', isActive: 0 },
-                  { id: 4, message: 'Submit', isActive: 0 }];
+app.factory('appProgressNavigationService', ['$http', '$log', '$q', function ($http, $log, $q) {
+    var progNav = [{ id: 1, message: 'Hotel Type', isActive: 0 },
+                  { id: 2, message: 'Room Type', isActive: 0 },
+                  { id: 3, message: 'Payment', isActive: 0 },
+                  { id: 4, message: 'Receipt', isActive: 0 }];
 
     var setProgress = function (message, temp, isDeactived) {
         var hasCompleted = true;
@@ -28,7 +28,7 @@ app.factory('progressNavigationService', ['$http', '$log', '$q', function ($http
     }
 
     return {
-        progNavForRarAndAdoi: progNavForRarAndAdoi,
+        progNav: progNav,
         setProgress: setProgress,
         setToDefaultProgress: setToDefaultProgress
     };
